@@ -8,22 +8,22 @@ import java.util.List;
 @Repository
 public class MovieDAO {
 
-    List<Movie> movieList;
+    Map<Movie> movieMap;
 
-    public MovieDAO(List<Movie> movieList) {
-        this.movieList = movieList;
+    public MovieDAO( Map<Movie> movieMap) {
+        this.movieMap = movieMap;
     }
 
     public Movie addMovie(Movie movie){
-        movieList.add(movie);
+        movieMap.put(movie);
         return movie;
     }
 
-    public List<Movie> getMovieList() {
-        return movieList;
+    public Map<Movie< getMovieList() {
+        return movieMap;
     }
 
     public Movie getMovie(int id){
-        return movieList.get(id);
+        return movieMap.get(id);
     }
 }
