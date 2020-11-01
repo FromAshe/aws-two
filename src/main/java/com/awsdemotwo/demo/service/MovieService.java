@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class MovieService {
@@ -14,7 +15,7 @@ public class MovieService {
     @Autowired
     MovieDAO movieDAO;
 
-    public List<Movie> getMovies(){
+    public Map<Integer, Movie> getMovies(){
         return movieDAO.getMovieList();
     }
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/movies")
@@ -25,7 +26,7 @@ public class MovieController {
     }
 
     @GetMapping("")
-    public List<Movie> getMovies(){
+    public Map<Integer, Movie> getMovies(){
         return movieService.getMovies();
     }
 }
